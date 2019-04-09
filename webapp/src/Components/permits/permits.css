@@ -1,0 +1,19 @@
+.resident:after  {
+    content: "\25CF";
+    color: yellow;
+}
+
+.non-resident:after  {
+    content: "\25CF";
+    color: red;
+}
+
+.faculty:after  {
+    content: "\25CF";
+    color: blue;
+}
+
+.visitor:after  {
+    content: "\25CF";
+    color: grey;
+}
