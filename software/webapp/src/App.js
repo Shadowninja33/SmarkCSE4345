@@ -3,7 +3,7 @@ import './App.css';
 import Garages from './Components/Garages/Garages';
 import Permits from './Components/Permits/Permits';
 
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
 
 
 class App extends Component {

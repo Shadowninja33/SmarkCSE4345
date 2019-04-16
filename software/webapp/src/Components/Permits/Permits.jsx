@@ -23,11 +23,11 @@ class Permits extends React.Component {
             <div className="Permits-Selection">
                 <ButtonToolbar className="button-toolbar">
                     <ToggleButtonGroup className="toggle-button-group text-center pagination-centered" type="checkbox" onChange={ e => this.setState({permits: e})}>
-                            <ToggleButton value={1} variant="Danger" size="lg">
+                            <ToggleButton value={1} variant="danger" size="lg">
                                 Resident
                             </ToggleButton>
 
-                            <ToggleButton value={2} variant="Warning" size="lg">
+                            <ToggleButton value={2} variant="warning" size="lg">
                                 Non-Resident
                             </ToggleButton>
 
@@ -35,7 +35,7 @@ class Permits extends React.Component {
                                 Faculty
                             </ToggleButton>
 
-                            <ToggleButton value={4} variant="Secondary" size="lg">
+                            <ToggleButton value={4} variant="secondary" size="lg">
                                 Visitor
                             </ToggleButton>
                     </ToggleButtonGroup>

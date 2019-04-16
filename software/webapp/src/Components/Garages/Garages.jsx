@@ -3,7 +3,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
-import { Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import "./Garages.css"
 
@@ -14,19 +14,14 @@ class Garages extends React.Component {
 
     state = {
         garages: [],
-        redirect: false,
     }
 
     onNext() {
         this.props.setGarages(this.state.garages);
-        this.setState({redirect: true});
+        this.props.history.push('/permits')
     }
 
     render() {
-
-        if(this.state.redirect){
-            return <Redirect push to="/permits" />
-        }
 
         return (
             <div className="Garages-Selection">
@@ -66,4 +61,4 @@ class Garages extends React.Component {
     }
 }
 
-export default Garages;
+export default withRouter(Garages);
