@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Garages from './Components/Garages/Garages';
 
-import ParkingTable from './Components/parkingTable'
 
 class App extends Component {
 
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ParkingTable />
+        <Garages />
       </div>
     );
   }
