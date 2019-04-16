@@ -3,9 +3,8 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Redirect } from "react-router-dom";
+
 import "./Garages.css"
 
 
@@ -15,18 +14,25 @@ class Garages extends React.Component {
 
     state = {
         garages: [],
+        redirect: false,
     }
 
     onNext() {
-        this.props.setGarages(this.state.garages)
+        this.props.setGarages(this.state.garages);
+        this.setState({redirect: true});
     }
 
     render() {
+
+        if(this.state.redirect){
+            return <Redirect push to="/permits" />
+        }
+
         return (
             <div className="Garages-Selection">
                 <ButtonToolbar className="button-toolbar">
                     <ToggleButtonGroup className="toggle-button-group text-center pagination-centered" type="checkbox" onChange={ e => this.setState({garages: e})}>
-                            <ToggleButton value={10} variant="primary" size="lg">
+                            <ToggleButton value={1} variant="primary" size="lg">
                                 Airline
                             </ToggleButton>
 

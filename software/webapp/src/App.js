@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Garages from './Components/Garages/Garages';
+import Permits from './Components/Permits/Permits';
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -9,6 +10,7 @@ class App extends Component {
 
   state = {
     currentgarages: [],
+    currentPermits:[],
 
   }
 
@@ -16,11 +18,30 @@ class App extends Component {
     this.setState(prevState => ({currentgarages: garages}));
   }
 
+  setPermits = permits => {
+    this.setState(prevState => ({currentPermits: permits}));
+  }
+  
+
   render() {
+
+    const selectGarages = (props) => {
+      return (
+        <Garages setGarages={g => this.setGarages(g)} />
+      );
+    }
+
+    const selectPermits = (props) => {
+      return (
+        <Permits setPermits={p => this.setPermits(p)} />
+      );
+    }
+
     return (
       <div className="App app-routes">
         <Switch>
-          <Route exact path="/garage"  component={Garages} setGarages={g => this.setGarages(g)} />
+          <Route exact path="/garages"  component={selectGarages}  />
+          <Route path="/permits" component={selectPermits} />
         </Switch>
       </div>
     );
