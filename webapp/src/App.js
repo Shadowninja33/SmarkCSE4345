@@ -10,15 +10,14 @@ class App extends Component {
 
   }
 
-  onGarageChange = garages => {
+  setGarages = garages => {
     this.setState(prevState => ({currentgarages: garages}));
-    
   }
 
   render() {
     return (
       <div className="App">
-        <Garages onGarageChange={g => this.onGarageChange(g)}/>
+        <Garages setGarages={g => this.setGarages(g)}/>
       </div>
     );
   }

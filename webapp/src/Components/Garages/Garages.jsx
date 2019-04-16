@@ -11,8 +11,14 @@ import "./Garages.css"
 
 class Garages extends React.Component {
     
+
+
     state = {
         garages: [],
+    }
+
+    onNext() {
+        this.props.setGarages(this.state.garages)
     }
 
     render() {
@@ -46,7 +52,7 @@ class Garages extends React.Component {
                     </ToggleButtonGroup>
                 </ButtonToolbar>
 
-                <Button className="submit">
+                <Button className="submit" onClick={e => this.onNext()}>
                     Next >>
                 </Button>
             </div>
