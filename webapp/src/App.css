@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   display: flex;
-  align-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("./Pictures/background-wallpapers-9.jpg");
   justify-content: center;
+  align-items: center;
 }
 

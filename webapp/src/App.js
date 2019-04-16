@@ -5,14 +5,20 @@ import Garages from './Components/Garages/Garages';
 
 class App extends Component {
 
-  setGarage = garage => {
-    this.setState({currentgarage: garage});
+  state = {
+    currentgarages: [],
+
+  }
+
+  onGarageChange = garages => {
+    this.setState(prevState => ({currentgarages: garages}));
+    
   }
 
   render() {
     return (
       <div className="App">
-        <Garages />
+        <Garages onGarageChange={g => this.onGarageChange(g)}/>
       </div>
     );
   }

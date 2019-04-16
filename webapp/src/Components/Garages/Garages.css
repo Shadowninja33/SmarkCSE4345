@@ -1,0 +1,16 @@
+.button-toolbar {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.toggle-button-group {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn {
+    margin: 10px;
+}
