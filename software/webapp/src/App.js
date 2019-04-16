@@ -3,7 +3,9 @@ import './App.css';
 import Garages from './Components/Garages/Garages';
 import Permits from './Components/Permits/Permits';
 
+
 import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
+import SpaceAttributes from './Components/SpaceAttributes/SpaceAttributes';
 
 
 class App extends Component {
@@ -11,7 +13,9 @@ class App extends Component {
   state = {
     currentgarages: [],
     currentPermits:[],
-
+    currentcovered: false,
+    currentcompact: false,
+    currentev: false,
   }
 
   setGarages = garages => {
@@ -22,6 +26,9 @@ class App extends Component {
     this.setState(prevState => ({currentPermits: permits}));
   }
   
+  setAttributes = (covered, compact, ev) => {
+    this.setState(prevState => ({currentcovered: covered, currentcompact: compact, currentev: ev}));
+  }
 
   render() {
 
@@ -37,11 +44,17 @@ class App extends Component {
       );
     }
 
+    const selectAttributes = (props) => {
+      return (
+      <SpaceAttributes setAttributes={(a, b, c) => this.setAttributes(a, b, c)} />
+      );
+    }
     return (
       <div className="App app-routes">
         <Switch>
           <Route exact path="/garages"  component={selectGarages}  />
           <Route path="/permits" component={selectPermits} />
+          <Route path="/attributes" component={selectAttributes} />
         </Switch>
       </div>
     );

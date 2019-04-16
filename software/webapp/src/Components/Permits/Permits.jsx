@@ -3,6 +3,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
+import { withRouter } from "react-router-dom";
 import "./Permits.css"
 
 
@@ -16,6 +17,7 @@ class Permits extends React.Component {
 
     onNext() {
         this.props.setPermits(this.state.permits)
+        this.props.history.push('/')
     }
 
     render() {
@@ -49,4 +51,4 @@ class Permits extends React.Component {
     }
 }
 
-export default Permits;
+export default withRouter(Permits);
