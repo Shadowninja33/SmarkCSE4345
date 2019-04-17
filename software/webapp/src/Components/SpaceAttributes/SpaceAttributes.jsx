@@ -4,6 +4,7 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import { withRouter } from "react-router-dom";
+import './SpaceAttributes.css'
 
 
 class SpaceAttributes extends React.Component {
@@ -18,7 +19,7 @@ class SpaceAttributes extends React.Component {
 
     onNext() {
         this.props.setAttributes(this.state.covered, this.state.compact, this.state.ev);
-        this.props.history.push('/permits')
+        this.props.history.push('/results')
     }
 
     setCovered = () => {
