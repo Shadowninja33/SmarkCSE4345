@@ -39,15 +39,15 @@ class SpaceAttributes extends React.Component {
 
         return (
             <div className="attributes-Selection">
-                <Button variant="primary" size="lg" onClick={this.setCovered}>
+                <Button variant={this.state.covered ? "secondary" : 'primary'} size="lg" onClick={this.setCovered}>
                     Covered
                 </Button>
 
-                <Button variant="primary" size="lg" onClick={this.setCompact}>
+                <Button variant={this.state.compact ? "secondary" : 'primary'} size="lg" onClick={this.setCompact}>
                     Compact
                 </Button>
 
-                <Button variant="primary" size="lg" onClick={this.setEv}>
+                <Button variant={this.state.ev ? "secondary" : 'primary'} size="lg" onClick={this.setEv}>
                     EV
                 </Button>
 
