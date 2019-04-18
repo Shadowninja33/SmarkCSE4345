@@ -1,7 +1,11 @@
 import React from 'react';
 
-import ReactTable from 'react-table';
-import 'react-table/react-table.css'
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlug } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCarSide } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Results = (props) => {
@@ -34,36 +38,32 @@ export const Results = (props) => {
 
     return (
         <>
-            <div className="table-responsive">
-                <table className="table table-striped table-condensed table-light">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Garage</th>
-                            <th>Level</th>
-                            <th>Compact</th>
-                            <th>Covered</th>
-                            <th>EV</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            props.data.map((a, i) =>
-                                <tr key={i}>
-                                    <td>{a.number}</td>
-                                    <td>{a.garage}</td>
-                                    <td>{a.level}</td>
-                                    <td>{a.compact}</td>
-                                    <td>{a.covered}</td>
-                                    <td>{a.ev}</td>
-                                </tr>
-                            )
-                        }
-                    </tbody>
-                </table>
-            </div>
-            {/* <ReactTable className="-striped bg-light" data={this.props.data} columns={columns} /> */}
-
+            <Table className="table-light">
+                <Thead>
+                    <Tr>
+                        <Th>#</Th>
+                        <Th>Garage</Th>
+                        <Th>Level</Th>
+                        <Th>Compact</Th>
+                        <Th>Covered</Th>
+                        <Th>EV</Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {
+                        props.data.map((a, i) =>
+                            <Tr key={i}>
+                                <Td>{a.number}</Td>
+                                <Td>{a.garage}</Td>
+                                <Td>{a.level}</Td>
+                                <Td>{(a.compact ? <FontAwesomeIcon icon={faCarSide} size="xl" style={{color: 'black'}} /> : <FontAwesomeIcon icon={faCarSide} size="xl" style={{color: 'lightgrey'}} /> )}</Td>
+                                <Td>{(a.covered ? <FontAwesomeIcon icon={faHome} size="xl" style={{color: 'black'}} /> : <FontAwesomeIcon icon={faHome} size="xl" style={{color: 'lightgrey'}} />)}</Td>
+                                <Td>{(a.ev ? <FontAwesomeIcon icon={faPlug} size="xl" style={{color: 'green'}} /> : <FontAwesomeIcon icon={faPlug} size="xl" style={{color: 'lightgrey'}} /> )}</Td>
+                            </Tr>
+                        )
+                    }
+                </Tbody>
+            </Table>
         </>
     );
 }

@@ -8,8 +8,6 @@ import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-
 import SpaceAttributes from './Components/SpaceAttributes/SpaceAttributes';
 import Results from './Components/Results/Results';
 import LandingPage from './Components/LandingPage/LandingPage';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlug } from '@fortawesome/free-solid-svg-icons';
 
 class App extends Component {
 
@@ -27,7 +25,7 @@ class App extends Component {
       level: 2,
       compact: true,
       covered: true,
-      ev: <FontAwesomeIcon icon={faPlug} size="xl" style={{color: 'green'}}/>
+      ev: true
     }, {
       number: 2,
       garage: 'Moody',
