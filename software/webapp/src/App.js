@@ -55,11 +55,6 @@ class App extends Component {
       covered: false,
       ev: false
     }]
-  
-  
-  addIconsToData = data => {
-    data.map()
-  }
 
   setGarages = garages => {
     this.setState(prevState => ({currentgarages: garages}));

@@ -18,7 +18,7 @@ class Results extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="w-100 h-100">
                 <Table className="table-light">
                     <Thead>
                         <Tr>
@@ -45,13 +45,14 @@ class Results extends React.Component {
                         }
                     </Tbody>
                 </Table>
-            </>
+            </div>
         );
     }
 
     componentDidMount() {
-        this.spaceRepository.getSpaces(this.props.query)
-        .then(spaces => this.setState({ spaces }));
+        // this.spaceRepository.getSpaces(this.props.query)
+        // .then(spaces => this.setState({ spaces }));
+        this.setState({spaces: this.props.data});
     }
 }
 
