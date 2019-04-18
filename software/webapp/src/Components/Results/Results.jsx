@@ -15,6 +15,7 @@ class Results extends React.Component {
         spaces: [],
     }
 
+
     render() {
         return (
             <>
@@ -31,7 +32,7 @@ class Results extends React.Component {
                     </Thead>
                     <Tbody>
                         {
-                            props.data.map((a, i) =>
+                            this.state.spaces.map((a, i) =>
                                 <Tr key={i}>
                                     <Td>{a.number}</Td>
                                     <Td>{a.garage}</Td>
