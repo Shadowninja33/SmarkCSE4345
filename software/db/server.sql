@@ -17,6 +17,4 @@ CREATE TABLE spots (
     level int NOT NULL DEFAULT 1,
     spotnum INT NOT NULL,
     
-
-
 );
