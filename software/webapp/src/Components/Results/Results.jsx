@@ -18,7 +18,22 @@ class Results extends React.Component {
 
     render() {
         return (
-            <div className="w-100 h-100 d-flex align-content-center">
+            <div className="w-100 h-100 d-flex flex-column  align-content-center">
+                <Table className="table-dark">
+                    <Thead>
+                        <Tr>
+                            <Th>Garage</Th>
+                            <Th>Open Spaces</Th>
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+                        <Tr>
+                            <Td>Binkley</Td>
+                            <Td>100</Td>
+                        </Tr>
+                    </Tbody>
+                </Table>
+                <div className="w-100 h-25"></div>
                 <Table className="itemized-results table-light">
                     <Thead>
                         <Tr>
