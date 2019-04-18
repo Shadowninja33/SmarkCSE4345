@@ -17,7 +17,7 @@ class Permits extends React.Component {
 
     onNext() {
         this.props.setPermits(this.state.permits)
-        this.props.history.push('/')
+        this.props.history.push('/attributes')
     }
 
     render() {

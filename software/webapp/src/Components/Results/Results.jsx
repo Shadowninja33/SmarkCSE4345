@@ -14,49 +14,7 @@ class Results extends React.Component {
       
   }
 
-
-
-
-
   render() {
-
-    const data = [{
-        number: 1,
-        garage: 'Binkley',
-        level: 2,
-        compact: true,
-        covered: true,
-        ev: true
-    }, {
-        number: 2,
-        garage: 'Moody',
-        level: 1,
-        compact: true,
-        covered: false,
-        ev: false
-    }, {
-        number: 3,
-        garage: 'Airline',
-        level: 1,
-        compact: true,
-        covered: false,
-        ev: true
-    }, {
-        number: 4,
-        garage: 'Moody',
-        level: 5,
-        compact: true,
-        covered: false,
-        ev: false
-    }, {
-        number: 5,
-        garage: 'Mustang',
-        level: 3,
-        compact: false,
-        covered: false,
-        ev: false
-    }
-]
 
     const columns = [{
         Header: '#',
@@ -79,9 +37,8 @@ class Results extends React.Component {
     }]
 
     return (
-
         <>
-            <ReactTable data={data} columns={columns} />
+            <ReactTable data={this.props.data} columns={columns} />
         </>
     ); 
   }
