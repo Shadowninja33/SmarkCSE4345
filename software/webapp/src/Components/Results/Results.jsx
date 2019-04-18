@@ -2,7 +2,7 @@ import React from 'react';
 
 import ReactTable from 'react-table';
 import 'react-table/react-table.css'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Results extends React.Component {
   constructor() {
@@ -39,6 +39,7 @@ class Results extends React.Component {
     return (
         <>
             <ReactTable data={this.props.data} columns={columns} />
+            <FontAwesomeIcon icon="fa-plug" size="lg"/>
         </>
     ); 
   }

@@ -16,6 +16,7 @@ class LandingPage extends React.Component {
 
     return (
         <>
+
             <Button varient="Primary" onClick={e => this.onNext()} >Start</Button>
         </>
 
