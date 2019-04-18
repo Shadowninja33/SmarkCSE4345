@@ -16,5 +16,7 @@ CREATE TABLE spots (
     spotid INT NOT NULL AUTO_INCREMENT,
     level int NOT NULL DEFAULT 1,
     spotnum INT NOT NULL,
+    lotid INT NOT NULL,
+    FOREIGN KEY (lotid) REFERENCES lots(lotid)
     
 );
