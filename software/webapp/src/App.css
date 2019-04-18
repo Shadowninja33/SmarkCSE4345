@@ -3,7 +3,8 @@
   display: flex;
   height: 100%;
   width: 100%;
-  background-image: url("./Pictures/background-wallpapers-9.jpg");
+  /* background-image: url("./Pictures/background-wallpapers-9.jpg"); */
+  background-color: grey;
   justify-content: center;
   align-items: center;
 }
