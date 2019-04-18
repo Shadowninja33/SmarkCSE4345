@@ -94,7 +94,7 @@ class App extends Component {
     }
 
     const showResults = (props) => {
-      return <Results data={this.data} />
+      return <Results data={this.data} query={this.state} />
     }
 
     return (

@@ -49,7 +49,7 @@ class Results extends React.Component {
     }
 
     componentDidMount() {
-        this.spaceRepository.getSpaces()
+        this.spaceRepository.getSpaces(this.props.query)
         .then(spaces => this.setState({ spaces }));
     }
 }
