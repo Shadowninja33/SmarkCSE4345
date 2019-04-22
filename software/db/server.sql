@@ -17,6 +17,9 @@ CREATE TABLE spots (
     level int NOT NULL DEFAULT 1,
     spotnum INT NOT NULL,
     lotid INT NOT NULL,
+    covered BOOL NOT NULL,
+    compact BOOL NOT NULL,
+    ev BOOL NOT NULL,
     FOREIGN KEY (lotid) REFERENCES lots(lotid)
     
 );
