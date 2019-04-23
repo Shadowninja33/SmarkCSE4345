@@ -7,6 +7,7 @@ CREATE TABLE lots (
     name VARCHAR(32),
     lat FLOAT,
     long FLOAT,
+    permits INT NOT NULL,
     PRIMARY KEY (lotid)
 
 );
