@@ -15,7 +15,7 @@ spec:
         app: park
     spec:
       containers:
-        - image: smark:latest
+        - image: gcr.io/instant-icon-235819/smark:latest
           name: parkapi
           env:
             - name: MYSQL_ROOT_PASSWORD
