@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parkapi
+  labels:
+    app: park
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: park
+  template:
+    metadata:
+      labels:
+        app: park
+    spec:
+      containers:
+        - image: smark:latest
+          name: parkapi
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql
+                  key: password
+          ports:
+            - containerPort: 8080
+              name: parkapi
